@@ -1,5 +1,9 @@
 # Change Log for Quick Customer Price
 
+## 3.2.1
+- FIX: Compatibility V16 : newToken - *29/06/2022* - 3.2.1
+
+
 ## Unreleased
 - NEW : Ajout de la class TechATM pour l'affichage de la page "A propos" *10/05/2022* 3.2.0
 
