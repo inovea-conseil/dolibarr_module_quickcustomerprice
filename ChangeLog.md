@@ -1,7 +1,7 @@
 # Change Log for Quick Customer Price
 
 ## 3.2.1
-- FIX: Compatibility V16 : newToken - *29/06/2022* - 3.2.1
+- FIX V15: FIX extrafield V15 - *29/06/2022* - 3.2.1
 
 
 ## Unreleased
