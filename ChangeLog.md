@@ -1,4 +1,7 @@
 # Change Log for Quick Customer Price
+## 3.2.2
+- FIX V16: FIX codeextrafield V16 
+
 ## 3.2.1
 - FIX V15: FIX extrafield V15 - *2022-06-29* - 3.2.1
 
