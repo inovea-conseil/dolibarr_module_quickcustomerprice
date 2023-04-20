@@ -280,6 +280,9 @@ function _showExtrafield($objectelement, $lineid, $code_extrafield)
     $line->fetch($lineid);
     $line->fetch_optionals();
     $extrafields->fetch_name_optionals_label($line->element);
+    if((int)DOL_VERSION >= 16){
+        $code_extrafield =  substr($code_extrafield, 0, 4);
+    }
     if ((int)DOL_VERSION >= 15){
         return $extrafields->showInputField($code_extrafield, $line->array_options['options_' . $code_extrafield],"","","","",0,$obj->table_element)
             . '&nbsp;&nbsp;<span class="quickSaveExtra" style="cursor:pointer;" type="' . $extrafields->attribute_type[$code_extrafield] . '" extracode="' . $code_extrafield . '" lineid="' . $lineid . '" lineclass="' . $lineclass . '"><i class="fa fa-check" aria-hidden="true"></i></span>';
@@ -299,6 +302,9 @@ function _saveExtrafield($lineid, $lineclass, $type, $code_extrafield, $value)
     $extrafields = new ExtraFields($db);
     $extrafields->fetch_name_optionals_label($line->element);
     $obj = new $lineclass($db);
+    if((int)DOL_VERSION >= 16){
+        $code_extrafield =  substr($code_extrafield, 0, 4);
+    }
     if (($extrafields->attribute_type[$code_extrafield] == 'datetime' || $extrafields->attribute_type[$code_extrafield] == 'date') && !empty($value)) $value = (int)$value+3600*2;
     if (is_array($value)) $value = implode(',', $value);
     $line->array_options['options_' . $code_extrafield] = $value;
